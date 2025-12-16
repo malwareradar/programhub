@@ -35,14 +35,20 @@
 		ul li a:hover {
 		  background-color: #111111;
 		}
-		section {
+		
+		.home-hide {
             display: none;
         }
-            
-        section:target {
-            display: block;
-        }
-</style>
+		
+		section {
+		    display: none;
+		}
+		
+		
+		section:target {
+		    display: block;
+		}
+	</style>
   </head>
   <body style="background-color: black;">
   	<ul>
@@ -53,30 +59,22 @@
 	  <li><a href="#windowsxp">Windows XP Applications</a></li>
 	  <li><a href="">Download ProgramHub Launcher</a></li> 
 	</ul>
-	<section id="home">
+	<div id="home">
 		<h1 style="color: white;">ProgramHub</h1>
     	<p style="color: white;">Welcome! You can get here programs, for free! And unrestricted! and for old systems like Windows XP!! Free Games! Free Programs!</p>
 		<p style="color: white;">We even have our own launcher! You can download it <a href="">here</a></p>
 		<p style="color: white;">We always examine our cracks and programs for viruses, trust is our priority!</p>
-	</section>
+	</div>
     
 	<section  id="crackgames">
 		<h1 style="color: white;">Cracked Games</h1>
-		<p style="color: white;">Games for free! These packed games are <strong>FREE<strong> of viruses!</p>	
+		<p style="color: white;">Games for free! These packed games are <strong>FREE</strong> of viruses!</p>	
 	</section>
 	<script>
-		document.addEventListener('DOMContentLoaded', (event) => {
-				
-		  const targetDirectory = '/programhub/';
-					
-		  const currentPath = window.location.pathname;
-					
-		  const elementToShow = document.getElementById('home');
-					
-		  if (currentPath.startsWith(targetDirectory) && elementToShow) {
-		    elementToShow.style.display = 'block';
-		  }
-		});
+		function toggleSection() {
+		    var section = document.getElementById('home-hide');
+		    section.classList.toggle('home');
+		}
 	</script>
   </body>
 </html>
