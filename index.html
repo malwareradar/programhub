@@ -54,7 +54,7 @@
   	<ul>
 	  <li><a href="/programhub/">Home</a></li>
 	  <li><a href="#crackgames" onclick="toggleSection();">Cracked Games</a></li>
-	  <li><a href="#crackprogams">Cracked Programs</a></li>
+	  <li><a href="#crackprograms">Cracked Programs</a></li>
 	  <li><a href="#programs">Programs</a></li>
 	  <li><a href="#windowsxp">Windows XP Applications</a></li>
 	  <li><a href="">Download ProgramHub Launcher</a></li> 
@@ -75,6 +75,15 @@
 		    var section = document.getElementById('home');
 		    section.classList.toggle('home-hide');
 		}
+		
+		const currentHash = window.location.hash;
+		
+		if (currentHash === "#crackgames") {
+			toggleSection();
+		} else if (currentHash === "#contact") {
+		    toggleSection();
+		} else {
+		 }
 	</script>
   </body>
 </html>
