@@ -53,7 +53,7 @@
   <body style="background-color: black;">
   	<ul>
 	  <li><a href="/programhub/">Home</a></li>
-	  <li><a href="#crackgames" onclick="toggleSection();">Cracked Games</a></li>
+	  <li><a href="#crackgames" onclick="fix();">Cracked Games</a></li>
 	  <li><a href="#crackprograms">Cracked Programs</a></li>
 	  <li><a href="#programs">Programs</a></li>
 	  <li><a href="#windowsxp">Windows XP Applications</a></li>
@@ -71,6 +71,12 @@
 		<p style="color: white;">Games for free! These packed games are <strong>FREE</strong> of viruses!</p>	
 	</section>
 	<script>
+		function fix() {
+			if (currentHash === "#crackgames") {
+			} else {
+				toggleSection();
+			}
+		}
 		function toggleSection() {
 		    var section = document.getElementById('home');
 		    section.classList.toggle('home-hide');
